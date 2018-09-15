@@ -6,6 +6,10 @@ This is repo to demonstrate the understanding of data structures and algorithms 
 
 A browser with access to the internet.
 
+### Deployment
+
+The pages are hosted on [github pages](https://kengowada.github.io/CS21000/)
+
 ### Tools Used
 
 * HTML
