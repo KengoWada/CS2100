@@ -1,0 +1,44 @@
+.jumbo-info{
+    background-image: linear-gradient(rgba(116, 116, 117, 0.5),rgba(116, 116, 117, 0.5)), url('../Images/bg-2.jpg');
+    background-size: cover;
+    border-radius: 0;
+    color: white;
+}
+
+.jumbo-info1{
+    background-image: linear-gradient(rgba(116, 116, 117, 0.5),rgba(116, 116, 117, 0.5)), url('../Images/about2.jpg');
+    background-size: cover;
+    border-radius: 0;
+    color: white;
+}
+
+.data-heading{
+    font-weight: bolder;
+    color: white;
+    text-decoration: underline;
+}
+
+.miami{
+    width: 45%;
+}
+
+.miami p{
+    font-size: 18px;
+}
+
+.cont-left{
+    margin-left: 8%;
+}
+
+.col-md-4 h3{
+    font-weight: bolder;
+    color: #636363;
+}
+
+.col-md-4 p{
+    color: #a8a8a8;
+}
+
+.col-md-4 a:hover{
+    text-decoration: underline #636363;
+}
