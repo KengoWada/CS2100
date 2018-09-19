@@ -89,7 +89,7 @@
 }
 
 .footer {
-  position: fixed;
+  position:relative;
   bottom: 0;
   height: 100px;
   width: 100%;
@@ -97,31 +97,4 @@
 
 .img-h{
     height: 150px;
-}
-
-.title-clas{
-    margin-top: 8%;
-    margin-bottom: 0;
-}
-
-.question{
-    text-decoration: underline;
-}
-
-.act-qn{
-    width: 85%;
-    margin-left: 25%;
-}
-
-.list-ol{
-    width: 75%;
-    margin-left: 25%;
-}
-
-.light-grey{
-    background-color: #efefef;
-}
-
-.form-left{
-    margin-left: 30%;
 }
