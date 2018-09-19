@@ -42,3 +42,12 @@
 .col-md-4 a:hover{
     text-decoration: underline #636363;
 }
+
+.cont-top{
+    margin-top: 7%;
+}
+
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
