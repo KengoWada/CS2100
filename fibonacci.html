@@ -51,14 +51,14 @@
                     </div>
                     <button id="inputNumber" type="submit" class="btn btn-primary mb-2"  >Fibonacci</button>
                 </form>
+                <div id="output" class="text-left">
                 <h4>Call Output</h4>
-                <div id="output">
                   <ul class="tabs">
-                    <p id="result"></p>
+                    <p id="result" class="text-left"></p>
                   </ul>
-                </div>
                 <h4>Final result:</h4>
-                <p id="final_result"></p>
+                <p id="final_result" class="text-left"></p>
+            </div>
             </div>
             <div class="col-md-6">
                 <h3 class="question">Code</h3>
@@ -85,27 +85,4 @@
         </footer>
     </body>
     <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript">
-
-    function fibonacci(num) {
-      if (num <= 1) return 1;
-      return fibonacci(num - 1) + fibonacci(num - 2);
-    }
-
-    $(document).ready(function(){
-      $('#inputNumber').click(function(event){
-        event.preventDefault();
-        var number_value = $('#number').val();
-        var output = "";
-        for(var x=0; x<=number_value; x++) {
-          output = output + fibonacci(x) + ",";
-        }
-
-        $('#result').empty();
-        $('#result').append(output);
-        var final_result = fibonacci(number_value);
-        $('#final_result').empty();
-        $('#final_result').append(final_result);
-      });
-    });
-    </script>
+    <script type="text/javascript" src="JS/fibonacci.js"></script>
