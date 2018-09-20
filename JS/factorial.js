@@ -1,11 +1,5 @@
-const input = "inputNumber";
-const newLocal1 = "lists";
-const result = "result";
-
-function factorial_final() {
-	var n = document.getElementById(input).value;
-
-  //terminate if x is less than one
+function factorial(n) {
+    //terminate if x is less than one
 	if (n < 0){
 		return;
 	}
@@ -14,39 +8,25 @@ function factorial_final() {
 		return 1;
 	} else {
 	//recursion
-		var element = document.getElementById(result);
-		var hold = n * factorial_final( n - 1 );
-		element.innerHTML = hold;
+		return n * factorial( n - 1 );
 	}
 }
 
+$(document).ready(function(){
+    $('#inputNumber').click(function(event){
+        event.preventDefault();
+        var number_value = $('#number').val();
+        var final_answer = factorial(number_value);
+        var output = [];
+        var n;
+        $('#lists').empty();
+        $('#final_answer').empty();
 
+        for (var x=0;x<=number_value; x++){
+            n = factorial(x);
+            $('#lists').append('<li>'+n+'</li>');
+        }
 
-function factorial_values() {
-	var n = document.getElementById(input).value;
-	console.log(n);
-	var fact = 1;
-
-	for (var x = n; x > 1; x--) {
-		fact *= x;
-		var li = document.createElement('li');
-		var text = document.createTextNode(fact);
-		li.appendChild(text);
-		document.getElementById(newLocal1).appendChild(li);
-	}
-}
-
-
-function factorial(n) {
-  var i =1;
-  for (var x = n;x>0; x--){
-    i *= x;
-    console.log(i);
-  }
-}
-
-function fibonacci(num) {
-	if (num <= 1) return 1;
-
-	return fibonacci(num - 1) + fibonacci(num - 2);
-}
+        $('#final_answer').append(final_answer);
+    });
+});
