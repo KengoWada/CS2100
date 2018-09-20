@@ -22,7 +22,7 @@ $(document).ready(function(){
         $('#lists').empty();
         $('#final_answer').empty();
 
-        for (var x=number_value;x>0; x--){
+        for (var x=number_value;x>1; x--){
             n*=x;
             $('#lists').append('<li>'+n+'</li>');
         }
