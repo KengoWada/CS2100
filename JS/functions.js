@@ -11,6 +11,14 @@ else if ( n === 0 ) {
 return n * factorial( n - 1 );
 }
 
+function factorial(n) {
+  var i =1;
+  for (var x = n;x>0; x--){
+    i *= x;
+    console.log(i);
+  }
+}
+
 function fibonacci(num) {
   if (num <= 1) return 1;
 
