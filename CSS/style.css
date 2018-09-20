@@ -99,6 +99,37 @@
     height: 150px;
 }
 
+<<<<<<< HEAD
 .fact-cont {
   padding: 50px;
 }
+=======
+.title-clas{
+    margin-top: 8%;
+}
+
+.question{
+    text-decoration: underline;
+}
+
+.act-qn{
+    width: 75%;
+    margin-left: 10%;
+}
+
+.form-left{
+    margin-left: 15%;
+}
+
+.cont-left-factorial{
+    margin-left: 7%;
+}
+
+.light-grey{
+    background-color: #efefef;
+}
+
+.red-code{
+    color: #ff006e;
+}
+>>>>>>> af796606abbe64ebfa37d8aee958424080a0465f
