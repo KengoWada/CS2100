@@ -18,12 +18,12 @@ $(document).ready(function(){
         var number_value = $('#number').val();
         var final_answer = factorial(number_value);
         var output = [];
-        var n;
+        var n=1;
         $('#lists').empty();
         $('#final_answer').empty();
 
-        for (var x=0;x<=number_value; x++){
-            n = factorial(x);
+        for (var x=number_value;x>0; x--){
+            n*=x;
             $('#lists').append('<li>'+n+'</li>');
         }
 
