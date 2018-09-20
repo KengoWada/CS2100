@@ -26,11 +26,9 @@ function factorial_values() {
 	var n = document.getElementById(input).value;
 	console.log(n);
 	var fact = 1;
-	var arr = [];
 
 	for (var x = n; x > 1; x--) {
 		fact *= x;
-		arr.push(fact);
 		var li = document.createElement('li');
 		var text = document.createTextNode(fact);
 		li.appendChild(text);
@@ -38,9 +36,6 @@ function factorial_values() {
 	}
 }
 
-function factorial() {
-	factorial_values();
-}
 
 function factorial(n) {
   var i =1;
