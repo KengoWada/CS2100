@@ -42,15 +42,19 @@
                     other.</b>
                 </p>
                     <div class="form-group mx-sm-3 mb-2">
-                        <input type="number" class="form-control" id="inputNumber" placeholder="Enter A Number">
+                        <input type="number" class="form-control" id="number" placeholder="Enter A Number">
                     </div>
-                    <button class="btn btn-primary mb-2" onclick="factorial_values()">Tower</button>
+                    <button class="btn btn-primary mb-2" onclick="factorial_values()" id="inputNumber">Tower</button>
+                <div class="text-left">
                 <h4>Output</h4>
-                <ul id="lists" class="text-left"/ul>
+                <ul id="lists" class="text-left"></ul>
+                <h4>Number of Moves:</h4>
+                <p id="final_result"></p>
+                </div>
             </div>
             <div class="col-md-6">
                 <h3 class="question">Code</h3>
-                <script src="https://gist.github.com/richistron/9309723.js"></script>
+                <script src="https://gist.github.com/v1b3m/2976527b296b2dab48ae43bf9310fe3e.js"></script>
             </div>
         </div>
         <footer class="mt-5">
@@ -72,5 +76,5 @@
             </div>
         </footer>
     </body>
-    <script type="text/javascript" src="JS/factorial.js"></script>
+    <script type="text/javascript" src="JS/tower.js"></script>
 </html>
