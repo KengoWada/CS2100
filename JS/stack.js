@@ -31,12 +31,12 @@ $(document).ready(function () {
         event.preventDefault();
         if (arr.length > 0) {
             arr.splice(0, arr.length);
+            $('#top').empty();
+            $('#len').empty();
+            $('#all').empty();
         }
         var stack = '[]';
         $('#display').empty();
-        $('#top').empty();
-        $('#len').empty();
-        $('#all').empty();
         $('#display').append(stack);      
     });
     $('#addBtn').click(function (event) {
