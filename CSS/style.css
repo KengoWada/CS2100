@@ -130,3 +130,20 @@
 .red-code{
     color: #ff006e;
 }
+
+.jumbo-stack{
+    height: 200px;
+    color: #ff006e;
+}
+
+.jumbo-size{
+    font-size: 75px;
+    margin-top: 0;
+}
+
+.div-jumbo-left{
+    margin-left: 10%;
+}
+.div-left{
+    margin-left: 5%;
+}
