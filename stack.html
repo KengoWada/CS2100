@@ -33,7 +33,7 @@
             </div>
         </nav>
         <div class="jumbotron text-center jumbo-stack">
-            <p class="jumbo-size" id="display">['kjsd', 'sdf', 'fgs', 45]</p>
+            <p class="jumbo-size" id="display"></p>
         </div><br><br>
         <div class="container d-inline div-jumbo-left">
             <button class="btn btn-success" id="createStack">Create Stack</button>
@@ -43,13 +43,15 @@
             </div>
             <button class="btn btn-danger div-left" id="popStack">Pop</button>
             <button class="btn btn-primary div-left" id="topMost">Top Most Element</button>
-            <p class="d-inline" id="top"><b>45</b></p>
-            <button class="btn btn-primary div-left" id="topMost">Length</button>
-            <p class="d-inline" id="top"><b>4 Elements</b></p>
+            <p class="d-inline"><b id="top"></b></p>
+            <button class="btn btn-primary div-left" id="arrLength">Length</button>
+            <p class="d-inline"><b id="len"></b></p>
         </div><br><br>
         <div class="container">
             <button class="btn btn-success div-left" id="allElements">All Elements</button>
-            <p class="d-inline"><b>['kjsd', 'sdf', 'fgs', 45]</b></p>
+            <p class="d-inline"><b id="all"></b></p>
         </div>
+        <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="JS/stack.js"></script>
     </body>
 </html>
