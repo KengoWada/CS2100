@@ -26,13 +26,16 @@ class Stack {
 
 
 $(document).ready(function () {
+    var arr = [];
     $('#createStack').click(function (event) { 
         event.preventDefault();
+        if (arr.length > 0) {
+            arr.splice(0, arr.length);
+        }
         var stack = '[]';
         $('#display').empty();
         $('#display').append(stack);      
     });
-    var arr = [];
     $('#addBtn').click(function (event) {
         event.preventDefault();
         var element = document.getElementById('element').value;
@@ -49,7 +52,7 @@ $(document).ready(function () {
     });
     $('#popStack').click(function (event) {
         event.preventDefault();
-        arr.splice(-1, 1);
+        arr.pop();
         $('#display').empty();
         $('#top').empty();
         $('#len').empty();
