@@ -34,6 +34,9 @@ $(document).ready(function () {
         }
         var stack = '[]';
         $('#display').empty();
+        $('#top').empty();
+        $('#len').empty();
+        $('#all').empty();
         $('#display').append(stack);      
     });
     $('#addBtn').click(function (event) {
