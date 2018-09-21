@@ -17,6 +17,10 @@ The pages are hosted on [github pages](https://kengowada.github.io/CS2100/)
 * JavaScript
 * BootStrap
 
+### Group Number
+
+SSED 02
+
 ### Authors
 
 * Kengo Wada
