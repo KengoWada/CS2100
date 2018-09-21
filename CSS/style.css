@@ -141,9 +141,14 @@
     margin-top: 0;
 }
 
-.div-jumbo-left{
+.form-left-in{
+    margin-left: -15px;
+}
+
+.div-left{
     margin-left: 10%;
 }
-.div-left{
-    margin-left: 5%;
+
+.btn-width{
+    width: 75%;
 }

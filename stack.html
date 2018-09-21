@@ -34,22 +34,27 @@
         </nav>
         <div class="jumbotron text-center jumbo-stack">
             <p class="jumbo-size" id="display"></p>
-        </div><br><br>
-        <div class="container d-inline div-jumbo-left">
-            <button class="btn btn-success" id="createStack">Create Stack</button>
-            <div class="d-inline div-left">
-                <input type="text" id="element" placeholder="Enter Element">
-                <button class="btn btn-primary" id="addBtn">Push</button>
+        </div>
+        <div class="container row text-center div-left">
+            <div class="col-md-6">
+                <button class="btn btn-success btn-width" id="createStack">Create Stack</button><br><br>
+                <form class="form-inline form-left">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="number" class="form-control" id="element" placeholder="Enter A Number" value="">
+                    </div>
+                    <button id="addBtn" class="btn btn-primary mb-2">Push</button>
+                </form><br>
+                <button class="btn btn-danger btn-width" id="popStack">Pop</button><br><br>
+                <button class="btn btn-primary btn-width" id="topMost">Top Most Element</button><br>
+                <p>Top most element is: <b id="top"></b></p>
+                <button class="btn btn-primary btn-width" id="arrLength">Length</button><br>
+                <p><b id="len"></b></p>
+                <button class="btn btn-success btn-width" id="allElements">All Elements</button><br>
+                <p><b id="all"></b></p>
             </div>
-            <button class="btn btn-danger div-left" id="popStack">Pop</button>
-            <button class="btn btn-primary div-left" id="topMost">Top Most Element</button>
-            <p class="d-inline"><b id="top"></b></p>
-            <button class="btn btn-primary div-left" id="arrLength">Length</button>
-            <p class="d-inline"><b id="len"></b></p>
-        </div><br><br>
-        <div class="container">
-            <button class="btn btn-success div-left" id="allElements">All Elements</button>
-            <p class="d-inline"><b id="all"></b></p>
+            <div class="col-md-6">
+                <h3 class="question">Code</h3>
+            </div>
         </div>
         <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="JS/stack.js"></script>
