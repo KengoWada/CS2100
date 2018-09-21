@@ -42,12 +42,18 @@ $(document).ready(function () {
             arr.push(element);
         }
         $('#display').empty();
+        $('#top').empty();
+        $('#len').empty();
+        $('#all').empty();
         $('#display').append('[' + arr + ']');
     });
     $('#popStack').click(function (event) {
         event.preventDefault();
         arr.splice(-1, 1);
         $('#display').empty();
+        $('#top').empty();
+        $('#len').empty();
+        $('#all').empty();
         $('#display').append('[' + arr + ']');
     });
     $('#topMost').click(function (event) {
