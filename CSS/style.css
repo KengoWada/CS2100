@@ -59,6 +59,10 @@
     color: #a8a8a8;
 }
 
+.list-ol li{
+    color: #727272;
+}
+
 .col-md-4 a:hover{
     text-decoration: underline #636363;
 }
@@ -130,7 +134,7 @@
 }
 
 .form-left{
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 .cont-left-factorial{
