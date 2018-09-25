@@ -21,8 +21,7 @@ class circularQueue {
 				this.queue[nextIndex] = element;
 				this.tail = nextIndex;
 			} else {
-				console.log('Queue is full.');
-				return;
+				return 'Queue is full.'
 			}
 		}
 	}
@@ -33,11 +32,12 @@ class circularQueue {
 			this.queue[this.head] = undefined;
 			this.head = (oldIndex + 1) % this.maxLen; 
 		} else {
-			console.log('Queue is empty')
+			return 'Nothing to remove !!!'
 		}
 	}
 
 	allElements () {
+		this.arr.splice(0, this.arr.length);
 		for ( var i = 0; i < this.queue.length; i++) {
 			if (this.queue[i] !== undefined) {
 				this.arr.push(this.queue[i]);
@@ -56,25 +56,95 @@ $(document).ready(function () {
 	$('#create').click(function (event) {
 		event.preventDefault();
 		var max  = document.getElementById('length').value;
-		var test = new circularQueue(max);
-		$('#display').empty();
-		$('#display').append('[' + test.queue + ']');
+		if (max === '' || /^ *$/.test(max)) {
+			$('#errorEn').empty();
+			$('#errorEn').append('Field can not be empty or contain spaces only.');
+			return;
+		} else {
+			var test = new circularQueue(max);
+			$('#top').empty();
+			$('#all').empty();
+			$('#len').empty();
+			$('#error').empty();
+			$('#errorE').empty();
+			$('#errorEn').empty();
+			$('#display').empty();
+			$('#display').append('[' + test.queue + ']');
+		}
 
 
 		$('#enqueue').click(function (event) {
 			event.preventDefault();
 			var element = document.getElementById('element').value;
-			test.enqueue(element);
-			$('#display').empty();
-			$('#display').append('[' + test.queue + ']');
+			if (element === '' || /^ *$/.test(element)) {
+				$('#errorE').empty();
+				$('#errorE').append('Field can not be empty or contain spaces only.');
+				return;
+			} else {
+				var hold = test.enqueue(element);
+				test.allElements();
+				var l = test.len();
+				if (hold === 'Queue is full.') {
+					$('#errorE').empty();
+					$('#errorE').append('Queue is full.');
+				} else {
+					$('#top').empty();
+					$('#all').empty();
+					$('#len').empty();
+					$('#error').empty();
+					$('#errorE').empty();
+					$('#display').empty();
+					$('#display').append('[' + test.queue + ']');
+				}
+			}
 		});
 
 
 		$('#dequeue').click(function (event) { 
 			event.preventDefault();
-			test.dequeue();
-			$('#display').empty();
-			$('#display').append('[' + test.queue + ']');
+			test.allElements();
+			if (test.len() === 0) {
+				$('#error').empty();
+				$('#error').append('Nothing to remove !!!');
+			} else {
+				test.dequeue();
+				test.allElements();
+				$('#display').empty();
+				$('#top').empty();
+				$('#all').empty();
+				$('#len').empty();
+				$('#error').empty();
+				$('#errorE').empty();
+				$('#display').append('[' + test.queue + ']');
+			}
+		});
+
+
+		$('#topMost').click(function (event) {
+			event.preventDefault();
+			var top = test.queue[test.head];
+			$('#top').empty();
+			$('#top').append(top);
+		});
+
+
+		$('#queueLength').click(function (event) {
+			event.preventDefault();
+			var l = test.len();
+			if (l === 1) {
+				$('#len').empty();
+				$('#len').append(l + ' element');
+			} else {
+				$('#len').empty();
+				$('#len').append(l + ' elements');
+			}
+		});
+
+
+		$('#allElements').click(function (event) {
+			event.preventDefault();
+			$('#all').empty();
+			$('#all').append('[' + test.arr + ']');
 		});
 	});
 });
