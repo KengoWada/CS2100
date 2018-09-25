@@ -1,5 +1,5 @@
 .jumbo-info{
-    background-image: linear-gradient(rgba(116, 116, 117, 0.5),rgba(116, 116, 117, 0.5)), url('../Images/bg-2.jpg');
+    background-image: linear-gradient(rgba(116, 116, 117, 0.75),rgba(116, 116, 117, 0.75)), url('../Images/bg-2.jpg');
     background-size: cover;
     border-radius: 0;
     color: white;
@@ -11,8 +11,16 @@
     border-radius: 0;
     color: white;
 }
+
 .jumbo-info2{
-    background-image: linear-gradient(rgba(116, 116, 117, 0.5),rgba(116, 116, 117, 0.5)), url('../Images/recursion.jpeg');
+    background-image: linear-gradient(rgba(116, 116, 117, 0.85),rgba(116, 116, 117, 0.85)), url('../Images/dataS1.png');
+    background-size: cover;
+    border-radius: 0;
+    color: white;
+}
+
+.jumbo-info3{
+    background-image: linear-gradient(rgba(116, 116, 117, 0.85),rgba(116, 116, 117, 0.85)), url('../Images/algo.jpg');
     background-size: cover;
     border-radius: 0;
     color: white;
@@ -63,7 +71,10 @@
     color: #727272;
 }
 
-.col-md-4 a:hover{
+.col-md-6 .a:hover{
+    text-decoration: underline #636363;
+}
+.col-md-6 .a-tag:hover{
     text-decoration: underline #636363;
 }
 
@@ -177,4 +188,20 @@
 
 .col-md-6 .error {
     color: #ff006e;
+}
+
+.h3-head {
+    font-weight: bolder;
+    text-decoration: underline #636363;
+    color: #636363;
+}
+
+.cont-width {
+    width: 65%;
+    margin-left: 20%;
+}
+
+.cont-width-al {
+    width: 45%;
+    margin-left: 30%;
 }
