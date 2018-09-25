@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>LEARNISTER | STACKS</title>
+        <title>LEARNISTER | QUEUE IMPLEMENTATION</title>
         <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@
                         <a href="topics.html" class="nav-link">TOPICS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="stack.html" class="nav-link active">STACKS</a>
+                        <a href="queues.html" class="nav-link active">QUEUES</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">ABOUT US</a>
@@ -37,29 +37,29 @@
         </div>
         <div class="container row text-center div-left">
             <div class="col-md-6">
-                <button class="btn btn-success btn-width" id="createStack">Create Stack</button><br><br>
+                <button class="btn btn-success btn-width" id="createQueue">Create Queue</button><br><br>
                 <form class="form-inline form-left">
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="number" class="form-control" id="element" placeholder="Enter A Number" value="">
                     </div>
-                    <button id="addBtn" class="btn btn-primary mb-2">Push</button>
+                    <button id="enqueue" class="btn btn-primary mb-2">Enqueue</button>
                 </form>
                 <p class="error"><b id="errorE"></b></p>
-                <button class="btn btn-danger btn-width" id="popStack">Pop</button><br>
-                <p class="error"><b id="error   "></b></p>
-                <button class="btn btn-primary btn-width" id="topMost">Top Most Element</button><br>
+                <button class="btn btn-danger btn-width" id="dequeue">Dequeue</button><br>
+                <p class="error"><b id="error"></b></p>
+                <button class="btn btn-primary btn-width" id="topMost">Peek</button><br>
                 <p>Top most element is: <b id="top"></b></p>
-                <button class="btn btn-primary btn-width" id="arrLength">Length</button><br>
+                <button class="btn btn-primary btn-width" id="queueLength">Length</button><br>
                 <p><b id="len"></b></p>
                 <button class="btn btn-success btn-width" id="allElements">All Elements</button><br>
                 <p><b id="all"></b></p>
             </div>
             <div class="col-md-6">
                 <h3 class="question">Code</h3>
-                <script src="https://gist.github.com/KengoWada/79d1a72e2669abe46a5b762bb38c417f.js"></script>
+                <script src="https://gist.github.com/KengoWada/21e3e6ff1581ac9bd57f573cd4b12c23.js"></script>
             </div>
         </div>
         <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="JS/stack.js"></script>
+        <script type="text/javascript" src="JS/queue.js"></script>
     </body>
 </html>

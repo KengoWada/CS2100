@@ -34,8 +34,15 @@ $(document).ready(function () {
             $('#top').empty();
             $('#len').empty();
             $('#all').empty();
+            $('#errorE').empty();
+            $('#error').empty();
         }
         var stack = '[]';
+        $('#errorE').empty();
+        $('#error').empty();
+        $('#top').empty();
+        $('#len').empty();
+        $('#all').empty();
         $('#display').empty();
         $('#display').append(stack);      
     });
@@ -43,6 +50,8 @@ $(document).ready(function () {
         event.preventDefault();
         var element = document.getElementById('element').value;
         if (element === '' || /^ *$/.test(element)) {
+            $('#errorE').empty();
+            $('#errorE').append('Field can not be empty or contain spaces only.');
             return;
         } else{
             arr.push(element);
@@ -51,16 +60,23 @@ $(document).ready(function () {
         $('#top').empty();
         $('#len').empty();
         $('#all').empty();
+        $('#errorE').empty();
         $('#display').append('[' + arr + ']');
     });
     $('#popStack').click(function (event) {
         event.preventDefault();
-        arr.pop();
-        $('#display').empty();
-        $('#top').empty();
-        $('#len').empty();
-        $('#all').empty();
-        $('#display').append('[' + arr + ']');
+        if (arr.length === 0) {
+            $('#error').empty();
+            $('#error').append('There is nothing to remove.')
+        } else {
+            arr.pop();
+            $('#display').empty();
+            $('#top').empty();
+            $('#len').empty();
+            $('#all').empty();
+            $('#errorE').empty();
+            $('#display').append('[' + arr + ']');
+        }
     });
     $('#topMost').click(function (event) {
         event.preventDefault();

@@ -3,7 +3,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>LEARNISTER | RECURSION IMPLEMENTATION</title>
+        <title>LEARNISTER | QUEUE IMPLEMENTATION</title>
         <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -24,7 +24,7 @@
                         <a href="topics.html" class="nav-link">TOPICS</a>
                     </li>
                     <li class="nav-item">
-                        <a href="recursion.html" class="nav-link active">RECURSION</a>
+                        <a href="queues.html" class="nav-link active">QUEUES</a>
                     </li>
                     <li class="nav-item">
                         <a href="about.html" class="nav-link">ABOUT US</a>
@@ -32,48 +32,36 @@
                 </ul>
             </div>
         </nav>
-        <div class="container row text-center cont-left cont-top padded">
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top img-h" src="Images/factorial.jpg" alt="Card image cap">
+        <div class="container row text-center cont-left-queue cont-top">
+            <div class="col-md-6">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-h" src="Images/queue.png" alt="Card image cap">
                     <div class="card-body">
-                        <h3 class="card-title"><b>Factorial of a Number</b></h3>
-                        <p class="card-text">This is a recursive program that finds the factorial of any
-                            number and outputs each call before getting the actual results.
-                            The actual result is then printed out.
+                        <h3 class="card-title"><b>Linear Queue</b></h3>
+                        <p class="card-text">A small program to demonstrate how a queue works such as 
+                            adding an element (Enqueue) and  removing an element (Dequeue).
                         </p>
-                        <a href="factorial.html"><button class="btn btn-primary">Implementation</button></a>
+                        <p>This takes a maximum of <b>12 elements.</b></p>
+                        <a href="queue.html"><button class="btn btn-primary">Implementation</button></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top img-h" src="Images/fibonaccci.jpg" alt="Card image cap">
+            <div class="col-md-6 circular">
+                <div class="card" style="width: 20rem;">
+                    <img class="card-img-top img-h" src="Images/Circular-queue.png" alt="Card image cap">
                     <div class="card-body">
-                        <h3 class="card-title"><b>Fibonacci of any Number</b></h3>
-                        <p class="card-text">This is a recursive program that outputs the fibonacci of
-                            any number but outputs each call before getting the actual result after
+                        <h3 class="card-title"><b>Circluar Queue</b></h3>
+                        <p class="card-text">Circular Queue is a linear data structure in which the 
+                            operations are performed based on FIFO (First In First Out) principle and the 
+                            last position is connected back to the first position to make a circle. 
                         </p>
                         <a href="fibonacci.html"><button class="btn btn-primary">Implementation</button></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top img-h" src="Images/hanoi.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h3 class="card-title"><b>The Tower of Hanoi</b></h3>
-                        <p class="card-text">A simulation of how disks can be moved from the source to the
-                            destination and also output the moves of each disk to move from one tower to
-                            another.
-                            <br>
-                        </p>
-                        <a href="tower.html"><button class="btn btn-primary">Implementation</button></a>
-                </div>
-            </div>
         </div>
       </div>
-      <footer class="mt-5 footer">
+      <footer class="mt-5 fixed-bottom">
         <div class="container-fluid bg-dark py-3">
           <div class="container">
             <div class="row py-3">
