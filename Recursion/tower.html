@@ -4,9 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <title>LEARNISTER | RECURSION IMPLEMENTATION</title>
-        <link rel="shortcut icon" type="image/png" href="Images/favicon.png">
+        <link rel="shortcut icon" type="image/png" href="../Images/favicon.png">
         <link rel="stylesheet" href="../CSS/css/bootstrap.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../CSS/style.css">
     </head>
@@ -39,15 +38,18 @@
                     number of moves each time a disk is moved from one tower to the
                     other.</b>
                 </p>
+                <form>
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="number" class="form-control" id="number" placeholder="Enter the number of Disks">
                     </div>
-                    <button class="btn btn-primary mb-2" id="inputNumber">Simulate</button>
+                    <button class="btn btn-success mb-2" id="inputNumber">Simulate</button>
+                </form>
+                <p class="error"><b id="error"></b></p>
                 <div class="text-left">
-                <h4>Output</h4>
-                <ul id="lists" class="text-left"></ul>
-                <h4>Number of Moves:</h4>
-                <b id="final_result"></b>
+                    <h4>Number of Moves:</h4>
+                    <b id="final_result"></b>
+                    <h4>Output</h4>
+                    <ul id="lists" class="text-left"></ul>
                 </div>
             </div>
             <div class="col-md-6">
