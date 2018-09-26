@@ -61,6 +61,11 @@ $(document).ready(function () {
 			$('#errorEn').append('Field can not be empty or contain spaces only.');
 			return;
 		} else {
+			if (max <= 0) {
+				$('#errorEn').empty();
+				$('#errorEn').append('Number can not be 0 or less than 0.');
+				return;
+			}
 			var test = new circularQueue(max);
 			$('#top').empty();
 			$('#all').empty();

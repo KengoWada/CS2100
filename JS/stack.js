@@ -12,10 +12,10 @@ class Stack {
     }
 
     topMost() {
-        return this.stack[-1];
+        return this.stack[this.stack.length - 1];
     }
 
-    length() {
+    len() {
         return this.stack.length;
     }
 
@@ -26,77 +26,84 @@ class Stack {
 
 
 $(document).ready(function () {
-    var arr = [];
     $('#createStack').click(function (event) { 
         event.preventDefault();
-        if (arr.length > 0) {
-            arr.splice(0, arr.length);
-            $('#top').empty();
-            $('#len').empty();
-            $('#all').empty();
-            $('#errorE').empty();
-            $('#error').empty();
-        }
-        var stack = '[]';
-        $('#errorE').empty();
+        var test = new Stack();
         $('#error').empty();
-        $('#top').empty();
-        $('#len').empty();
-        $('#all').empty();
-        $('#display').empty();
-        $('#display').append(stack);      
-    });
-    $('#addBtn').click(function (event) {
-        event.preventDefault();
-        var element = document.getElementById('element').value;
-        if (element === '' || /^ *$/.test(element)) {
-            $('#errorE').empty();
-            $('#errorE').append('Field can not be empty or contain spaces only.');
-            return;
-        } else{
-            arr.push(element);
-        }
-        $('#display').empty();
-        $('#top').empty();
-        $('#len').empty();
-        $('#all').empty();
         $('#errorE').empty();
-        $('#display').append('[' + arr + ']');
-    });
-    $('#popStack').click(function (event) {
-        event.preventDefault();
-        if (arr.length === 0) {
-            $('#error').empty();
-            $('#error').append('There is nothing to remove.')
-        } else {
-            arr.pop();
-            $('#display').empty();
-            $('#top').empty();
-            $('#len').empty();
-            $('#all').empty();
-            $('#errorE').empty();
-            $('#display').append('[' + arr + ']');
-        }
-    });
-    $('#topMost').click(function (event) {
-        event.preventDefault();
-        var top = arr[(arr.length) - 1];
         $('#top').empty();
-        $('#top').append(top);
-    });
-    $('#arrLength').click(function (event) {
-        event.preventDefault();
-        var len = arr.length;
-        $('#len').empty();
-        if (len === 1){
-            $('#len').append(len + ' Element');
-        } else {
-            $('#len').append(len + ' Elements');
-        }
-    });
-    $('#allElements').click(function (event) {
-        event.preventDefault();
         $('#all').empty();
-        $('#all').append('[' + arr + ']');
+        $('#len').empty();
+        $('#display').empty();
+        $('#display').append('[' + test.stack + ']');
+
+
+        $('#addBtn').click(function (event) {
+            event.preventDefault();
+            var element = document.getElementById('element').value;
+            if (element === '' || /^ *$/.test(element)) {
+                $('#errorE').empty();
+                $('#errorE').append('Field can not be empty or contain spaces only.');
+                return;
+            } else {
+                test.push(element);
+                $('#error').empty();
+                $('#errorE').empty();
+                $('#top').empty();
+                $('#all').empty();
+                $('#len').empty();
+                $('#display').empty();
+                $('#display').append('[' + test.stack + ']');
+            }
+        });
+
+
+        $('#popStack').click(function (event) { 
+            event.preventDefault();
+            if (test.len() === 0 ) {
+                $('#errorE').empty();
+                $('#top').empty();
+                $('#all').empty();
+                $('#len').empty();
+                $('#error').empty();
+                $('#error').append('Stack is empty.');
+                return;
+            } else {
+                test.pop();
+                $('#error').empty();
+                $('#errorE').empty();
+                $('#top').empty();
+                $('#all').empty();
+                $('#len').empty();
+                $('#display').empty();
+                $('#display').append('[' + test.stack + ']');
+            }
+        });
+
+
+        $('#topMost').click(function (event) { 
+            event.preventDefault();
+            $('#top').empty();
+            $('#top').append(test.topMost());
+        });
+
+
+        $('#arrLength').click(function (event) { 
+            event.preventDefault();
+            if (test.len() === 1) {
+                $('#len').empty();
+                $('#len').append(test.len() + ' element');
+            } else {
+                $('#len').empty();
+                $('#len').append(test.len() + ' elements');
+            }
+        });
+
+
+        $('#allElements').click(function (event) { 
+            event.preventDefault();
+            $('#all').empty();
+            $('#all').append('[' + test.allElements() + ']');
+        });
     });
 });

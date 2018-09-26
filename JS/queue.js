@@ -51,91 +51,93 @@ class Queue {
     }
 }
 
-$(document).ready(function () {
-    var test = new Queue();
+$(document).ready(function () {    
     $('#createQueue').click(function (event) {
         event.preventDefault();
-        if (test.size() > 0) {
-            test.queue.splice(0, test.size.length);
-            $('#top').empty();
-            $('#len').empty();
-            $('#all').empty();
-            $('#error').empty();
-        }
+        var test = new Queue();
         var newQ = '[]';
+        $('#top').empty();
+        $('#len').empty();
+        $('#all').empty();
+        $('#error').empty();
         $('#error').empty();
         $('#display').empty();
         $('#display').append(newQ);
-    });
 
-    $('#enqueue').click(function (event) {
-        event.preventDefault();
-        var element = document.getElementById('element').value;
-        if (element === '' || /^ *$/.test(element)) {
-            $('#errorE').empty();
-            $('#errorE').append('Field can not be empty or contain spaces only.')
-        } else{
-            if (test.queue.length < 12) {
-                test.enqueue(element);
+
+        $('#enqueue').click(function (event) {
+            event.preventDefault();
+            var element = document.getElementById('element').value;
+            if (element === '' || /^ *$/.test(element)) {
+                $('#errorE').empty();
+                $('#errorE').append('Field can not be empty or contain spaces only.')
+            } else{
+                if (test.queue.length < 12) {
+                    test.enqueue(element);
+                    $('#top').empty();
+                    $('#len').empty();
+                    $('#all').empty();
+                    $('#error').empty();
+                    $('#errorE').empty();
+                    $('#display').empty();
+                    $('#display').append('[' + test.queue + ']');
+                } else if (test.queue.length === 12) {
+                    var error = 'The queue is full !!!';
+                    $('#errorE').empty();
+                    $('#display').empty();
+                    $('#display').append('[' + test.queue + ']');
+                    $('#errorE').append(error);
+                }
+            }
+        });
+
+
+        $('#dequeue').click(function (event) {
+            event.preventDefault();
+            if (test.size() > 0) {
+                test.dequeue()
                 $('#top').empty();
                 $('#len').empty();
                 $('#all').empty();
+                $('#display').empty();
                 $('#error').empty();
                 $('#errorE').empty();
+                $('#display').append('[' + test.queue + ']');
+            } else if (test.size() === 0) {
+                test.dequeue();
+                var error = test.dequeue();
+                $('#error').empty();
                 $('#display').empty();
                 $('#display').append('[' + test.queue + ']');
-            } else if (test.queue.length === 12) {
-                var error = 'The queue is full !!!';
-                $('#errorE').empty();
-                $('#display').empty();
-                $('#display').append('[' + test.queue + ']');
-                $('#errorE').append(error);
+                $('#error').append(error);
             }
-        }
-    });
+        });
 
-    $('#dequeue').click(function (event) {
-        event.preventDefault();
-        if (test.size() > 0) {
-            test.dequeue()
+
+        $('#topMost').click(function (event) {
+            event.preventDefault();
+            var top = test.tailElement();
             $('#top').empty();
+            $('#top').append(top);
+        });
+    
+
+        $('#queueLength').click(function (event) {
+            event.preventDefault();
+            var len = test.size();
             $('#len').empty();
+            if (len === 1){
+                $('#len').append(len + ' Element');
+            } else {
+                $('#len').append(len + ' Elements');
+            }
+        });
+    
+
+        $('#allElements').click(function (event) {
+            event.preventDefault();
             $('#all').empty();
-            $('#display').empty();
-            $('#error').empty();
-            $('#errorE').empty();
-            $('#display').append('[' + test.queue + ']');
-        } else if (test.size() === 0) {
-            test.dequeue();
-            var error = test.dequeue();
-            $('#error').empty();
-            $('#display').empty();
-            $('#display').append('[' + test.queue + ']');
-            $('#error').append(error);
-        }
-    });
-
-    $('#topMost').click(function (event) {
-        event.preventDefault();
-        var top = test.tailElement();
-        $('#top').empty();
-        $('#top').append(top);
-    });
-
-    $('#queueLength').click(function (event) {
-        event.preventDefault();
-        var len = test.size();
-        $('#len').empty();
-        if (len === 1){
-            $('#len').append(len + ' Element');
-        } else {
-            $('#len').append(len + ' Elements');
-        }
-    });
-
-    $('#allElements').click(function (event) {
-        event.preventDefault();
-        $('#all').empty();
-        $('#all').append('[' + test.allElements() + ']');
-    });
+            $('#all').append('[' + test.allElements() + ']');
+        });
+    });    
 });
