@@ -14,22 +14,32 @@ function factorial(n) {
 }
 
 $(document).ready(function(){
-    $('#inputNumber').click(function(event){ // Listens for a click on the button with Id 'inputNumber'.
-        event.preventDefault(); // Prevents the page from reloading everytime the button is clicked.
-        var number_value = $('#number').val(); // Get the value from the user input.
-        var final_answer = factorial(number_value); // Run the factorial function with user input.
-        var output = [];
-        var n=1;
-        $('#lists').empty();
-        $('#final_answer').empty();
+    $('#inputNumber').click(function(event){
+        event.preventDefault();
+        var number_value = $('#number').val();
+        if (number_value > 21) {
+            $('#lists').empty();
+            $('#final_answer').empty();
+            $('#error').empty();
+            $('#error').append('Please enter a value smaller than 21 for sensible results.');
+        } else {
+            if (number_value <= 0) {
+                $('#error').empty();
+                $('#error').append('Number can not be 0 or less than 0');
+                return;
+            }
+            var final_answer = factorial(number_value); 
+            var n=1;
+            $('#error').empty();
+            $('#lists').empty();
+            $('#final_answer').empty();
 
-        // For loop to print every call of the recursive function.
-        for (var x=number_value;x>1; x--){
-            n*=x;
-            $('#lists').append('<li>'+n+'</li>');
+            for (var x=number_value;x>1; x--){
+                n*=x;
+                $('#lists').append('<li>'+n+'</li>');
+            }
+
+            $('#final_answer').append(final_answer);
         }
-
-        // Print the final value of the recursive function.
-        $('#final_answer').append(final_answer);
     });
 });
