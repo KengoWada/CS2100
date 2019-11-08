@@ -1,3 +1,7 @@
+body {
+    color: #000000;
+}
+
 .jumbo-info{
     background-image: linear-gradient(rgba(116, 116, 117, 0.75),rgba(116, 116, 117, 0.75)), url('../Images/bg-2.jpg');
     background-size: cover;
@@ -28,7 +32,7 @@
 
 .data-heading{
     font-weight: bolder;
-    color: white;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -51,16 +55,16 @@
 
 .col-md-4 h3{
     font-weight: bolder;
-    color: #636363;
+    /* color: #636363; */
 }
 
-.col-md-4 p{
+/* .col-md-4 p{
     color: #a8a8a8;
-}
+} */
 
 .col-md-6 h3{
     font-weight: bolder;
-    color: #636363;
+    /* color: #636363; */
 }
 
 .col-md-6 p{
